@@ -1,0 +1,149 @@
+backend:
+  name: github
+  repo: uuyair/testtt
+  branch: main
+local_backend: true
+media_folder: images
+public_folder: /images
+collections:
+- label: Website content
+  name: content
+  files:
+  - label: Site settings & text
+    name: site
+    file: content/site.json
+    fields:
+      - label: Nav links
+        name: nav
+        widget: list
+        field: {label: Text, name: text, widget: string}
+      - {label: Brand, name: brand, widget: string}
+      - {label: Header button, name: hdrCta, widget: string}
+      - {label: Logos title, name: logosTitle, widget: string}
+      - {label: Services title, name: svcTitle, widget: string}
+      - {label: Services intro, name: svcIntro, widget: string}
+      - {label: Why-us title, name: whyTitle, widget: string}
+      - {label: Stats title, name: statTitle, widget: string}
+      - {label: Fit title, name: fitTitle, widget: string}
+      - {label: Testimonials title, name: testTitle, widget: string}
+      - {label: About title, name: aboutTitle, widget: string}
+      - {label: Footer, name: footer, widget: string}
+      - label: Hero
+        name: hero
+        widget: object
+        fields:
+          - {label: Eyebrow, name: eyebrow, widget: string}
+          - {label: Headline, name: h1, widget: string}
+          - {label: Subtext, name: sub, widget: text}
+          - {label: Button 1, name: cta1, widget: string}
+          - {label: Button 2, name: cta2, widget: string}
+      - label: Proof points
+        name: proof
+        widget: list
+        fields:
+          - {label: Text, name: t, widget: string}
+      - label: About paragraphs
+        name: about
+        widget: list
+        field: {label: Text, name: text, widget: string}
+      - label: Closing CTA
+        name: cta
+        widget: object
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Text, name: text, widget: string}
+          - {label: Button, name: btn, widget: string}
+  - label: Clients
+    name: clients
+    file: content/clients.json
+    fields:
+      - label: Items
+        name: items
+        widget: list
+        field: {label: Text, name: text, widget: string}
+  - label: Services
+    name: services
+    file: content/services.json
+    fields:
+      - label: Items
+        name: items
+        widget: list
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: Description, name: desc, widget: text}
+          - {label: Link, name: url, widget: string}
+  - label: Why us
+    name: differentiators
+    file: content/differentiators.json
+    fields:
+      - label: Items
+        name: items
+        widget: list
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: Description, name: desc, widget: text}
+  - label: Stats
+    name: stats
+    file: content/stats.json
+    fields:
+      - label: Items
+        name: items
+        widget: list
+        fields:
+          - {label: Value, name: value, widget: string}
+          - {label: Label, name: label, widget: string}
+  - label: Case studies
+    name: cases
+    file: content/cases.json
+    fields:
+      - label: Items
+        name: items
+        widget: list
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Metric 1, name: metric1, widget: string}
+          - {label: Metric 2, name: metric2, widget: string}
+          - {label: Link, name: url, widget: string}
+  - label: Fit (good / poor match)
+    name: fit
+    file: content/fit.json
+    fields:
+      - label: Great match
+        name: yes
+        widget: list
+        field: {label: Text, name: text, widget: string}
+      - label: Less of a match
+        name: no
+        widget: list
+        field: {label: Text, name: text, widget: string}
+  - label: Testimonials
+    name: testimonials
+    file: content/testimonials.json
+    fields:
+      - label: Items
+        name: items
+        widget: list
+        fields:
+          - {label: Quote, name: quote, widget: text}
+          - {label: Name, name: name, widget: string}
+          - {label: Role, name: role, widget: string}
+  - label: Industries
+    name: industries
+    file: content/industries.json
+    fields:
+      - label: Items
+        name: items
+        widget: list
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: Description, name: desc, widget: text}
+  - label: FAQs
+    name: faqs
+    file: content/faqs.json
+    fields:
+      - label: Items
+        name: items
+        widget: list
+        fields:
+          - {label: Question, name: q, widget: string}
+          - {label: Answer, name: a, widget: text}

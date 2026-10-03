@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "name": "ROI-driven",
+      "desc": "Explain your measurement philosophy."
+    },
+    {
+      "name": "Senior experts",
+      "desc": "Explain who works on accounts."
+    },
+    {
+      "name": "Transparent partnership",
+      "desc": "Explain reporting and pricing."
+    },
+    {
+      "name": "Client retention",
+      "desc": "Add your retention figure."
+    },
+    {
+      "name": "Highly rated",
+      "desc": "Add review score and platforms."
+    }
+  ]
+}

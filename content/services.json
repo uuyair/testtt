@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "name": "Digital strategy",
+      "desc": "Short service description.",
+      "url": "#"
+    },
+    {
+      "name": "Social media",
+      "desc": "Short service description.",
+      "url": "#"
+    },
+    {
+      "name": "E-commerce marketing",
+      "desc": "Short service description.",
+      "url": "#"
+    },
+    {
+      "name": "Performance media",
+      "desc": "Short service description.",
+      "url": "#"
+    },
+    {
+      "name": "SEO",
+      "desc": "Short service description.",
+      "url": "#"
+    },
+    {
+      "name": "Content marketing",
+      "desc": "Short service description.",
+      "url": "#"
+    }
+  ]
+}

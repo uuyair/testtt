@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agency Homepage</title>
+<style>
+:root{--bg:#fff;--bg2:#f4f5f7;--tx:#14161a;--mu:#5b6270;--ac:#e8590c;--bd:#e2e4e8;--card:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1013;--bg2:#161a1f;--tx:#f2f3f5;--mu:#9aa2af;--bd:#262b33;--card:#161a1f}}
+:root[data-theme="dark"]{--bg:#0e1013;--bg2:#161a1f;--tx:#f2f3f5;--mu:#9aa2af;--bd:#262b33;--card:#161a1f}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:64px 0;border-bottom:1px solid var(--bd);position:relative}
+section:nth-of-type(even){background:var(--bg2)}
+.tag{position:absolute;top:10px;right:14px;font:11px monospace;color:var(--mu);opacity:.8}
+h1{font-size:clamp(32px,6vw,56px);line-height:1.1;margin:0 0 16px}
+h2{font-size:clamp(24px,4vw,34px);margin:0 0 12px}
+h3{margin:0 0 6px;font-size:18px}
+p{margin:0 0 12px;color:var(--mu)}
+.btn{display:inline-block;background:var(--ac);color:#fff;text-decoration:none;padding:12px 22px;border-radius:8px;font-weight:600;border:0;cursor:pointer;font-size:15px}
+.btn.o{background:none;color:var(--tx);border:1px solid var(--bd)}
+.g{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--bd);z-index:5}
+header .w{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+nav{display:flex;gap:16px;flex-wrap:wrap;font-size:14px}
+nav a{text-decoration:none;color:var(--mu)}
+.logo{font-weight:800;font-size:20px}
+.logos{display:flex;gap:12px;flex-wrap:wrap}
+.logos span{background:var(--card);border:1px dashed var(--bd);border-radius:8px;padding:14px 22px;color:var(--mu);font-size:13px}
+.big{font-size:40px;font-weight:800;color:var(--ac);line-height:1}
+.pill{display:inline-block;font-size:12px;border:1px solid var(--bd);border-radius:99px;padding:2px 10px;margin:2px 4px 2px 0;color:var(--mu)}
+.ok li::marker{content:"✓ ";color:#2f9e44}.no li::marker{content:"✕ ";color:#e03131}
+ul{padding-left:22px;margin:8px 0;color:var(--mu)}
+details{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}
+footer{padding:32px 0;color:var(--mu);font-size:14px}
+#cmsbtn{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:9;box-shadow:0 4px 16px #0004}
+#cms{position:fixed;inset:0;background:var(--bg);z-index:20;overflow:auto;display:none;padding:calc(20px + env(safe-area-inset-top,0px)) 0 40px}
+#cms.on{display:block}
+pre{background:var(--bg2);border:1px solid var(--bd);border-radius:10px;padding:14px;overflow-x:auto;font-size:12px;max-height:340px}
+textarea{width:100%;min-height:200px;font:12px monospace;background:var(--bg2);color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:12px}
+table{width:100%;border-collapse:collapse;font-size:13px;display:block;overflow-x:auto}
+td,th{border-bottom:1px solid var(--bd);padding:6px 10px;text-align:left;white-space:nowrap}
+body.edit [data-wf-collection]{outline:1px dashed var(--ac);outline-offset:-4px}
+</style>
+</head>
+<body>
+<header data-module="header"><div class="w"><span class="logo" id="brand"></span><nav id="nav"></nav><a class="btn" href="#contact" id="hdrcta"></a></div></header>
+
+<section data-module="hero"><span class="tag">module: hero</span><div class="w">
+<span class="pill" id="eyebrow"></span><h1 id="h1"></h1><p id="sub" style="max-width:620px"></p>
+<p><a class="btn" href="#contact" id="cta1"></a> <a class="btn o" href="#cases" id="cta2"></a></p>
+<div class="g" id="proof"></div></div></section>
+
+<section data-module="logo-strip"><span class="tag">module: logo-strip</span><div class="w"><h2 id="logosTitle"></h2><div class="logos" id="logos" data-wf-collection="clients"></div></div></section>
+
+<section id="services" data-module="services"><span class="tag">module: services</span><div class="w"><h2 id="svcTitle"></h2><p id="svcIntro"></p><div class="g" id="svc" data-wf-collection="services"></div></div></section>
+
+<section data-module="approach"><span class="tag">module: approach / why us</span><div class="w"><h2 id="whyTitle"></h2><div class="g" id="why" data-wf-collection="differentiators"></div></div></section>
+
+<section data-module="stats"><span class="tag">module: stats</span><div class="w"><h2 id="statTitle"></h2><div class="g" id="stats" data-wf-collection="stats"></div></div></section>
+
+<section id="cases" data-module="case-studies"><span class="tag">module: case-studies</span><div class="w"><h2>Case studies</h2><div class="g" id="caseGrid" data-wf-collection="case-studies"></div></div></section>
+
+<section data-module="fit"><span class="tag">module: good-fit / poor-fit</span><div class="w"><h2 id="fitTitle"></h2><div class="g"><div class="c"><h3>Great match</h3><ul class="ok" id="fitYes" data-wf-collection="fit-items"></ul></div><div class="c"><h3>Less of a match</h3><ul class="no" id="fitNo" data-wf-collection="fit-items"></ul></div></div></div></section>
+
+<section data-module="testimonials"><span class="tag">module: testimonials</span><div class="w"><h2 id="testTitle"></h2><div class="g" id="tests" data-wf-collection="testimonials"></div></div></section>
+
+<section data-module="about"><span class="tag">module: about</span><div class="w"><h2 id="aboutTitle"></h2><div id="aboutBody"></div></div></section>
+
+<section data-module="industries"><span class="tag">module: industries</span><div class="w"><h2>Industries we serve</h2><div id="inds" data-wf-collection="industries"></div></div></section>
+
+<section data-module="faq"><span class="tag">module: faq</span><div class="w"><h2>FAQs</h2><div id="faq" data-wf-collection="faqs"></div></div></section>
+
+<section id="contact" data-module="cta-banner"><span class="tag">module: cta-banner</span><div class="w" style="text-align:center"><h2 id="ctaTitle"></h2><p id="ctaText"></p><a class="btn" href="#" id="ctaBtn"></a></div></section>
+
+<footer data-module="footer"><div class="w" id="foot"></div></footer>
+
+<script>
+var D=null;
+var $=function(i){return document.getElementById(i)};
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function render(){
+$("brand").textContent=D.brand;
+$("nav").innerHTML=D.nav.map(function(n,i){return'<a href="#'+["services","cases","contact","contact","contact"][i]+'">'+esc(n)+"</a>"}).join("");
+$("hdrcta").textContent=D.hdrCta;
+$("eyebrow").textContent=D.hero.eyebrow;$("h1").textContent=D.hero.h1;$("sub").textContent=D.hero.sub;$("cta1").textContent=D.hero.cta1;$("cta2").textContent=D.hero.cta2;
+$("proof").innerHTML=D.proof.map(function(p){return'<div class="c"><strong>'+esc(p.t)+"</strong></div>"}).join("");
+$("logosTitle").textContent=D.logosTitle;
+$("logos").innerHTML=D.clients.map(function(c){return"<span>"+esc(c)+"</span>"}).join("");
+$("svcTitle").textContent=D.svcTitle;$("svcIntro").textContent=D.svcIntro;
+$("svc").innerHTML=D.services.map(function(s){return'<a class="c" href="'+esc(s.url)+'" style="text-decoration:none"><h3>'+esc(s.name)+"</h3><p>"+esc(s.desc)+"</p></a>"}).join("");
+$("whyTitle").textContent=D.whyTitle;
+$("why").innerHTML=D.differentiators.map(function(s){return'<div class="c"><h3>'+esc(s.name)+"</h3><p>"+esc(s.desc)+"</p></div>"}).join("");
+$("statTitle").textContent=D.statTitle;
+$("stats").innerHTML=D.stats.map(function(s){return'<div class="c"><div class="big">'+esc(s.value)+"</div><p>"+esc(s.label)+"</p></div>"}).join("");
+$("caseGrid").innerHTML=D.cases.map(function(s){return'<div class="c"><div style="height:120px;background:var(--bg2);border-radius:8px;margin-bottom:12px"></div><h3>'+esc(s.title)+'</h3><span class="pill">'+esc(s.metric1)+'</span><span class="pill">'+esc(s.metric2)+'</span><p><a href="'+esc(s.url)+'">Go to case →</a></p></div>'}).join("");
+$("fitTitle").textContent=D.fitTitle;
+$("fitYes").innerHTML=D.fit.yes.map(function(x){return"<li>"+esc(x)+"</li>"}).join("");
+$("fitNo").innerHTML=D.fit.no.map(function(x){return"<li>"+esc(x)+"</li>"}).join("");
+$("testTitle").textContent=D.testTitle;
+$("tests").innerHTML=D.testimonials.map(function(t){return'<div class="c"><p>“'+esc(t.quote)+"”</p><strong>"+esc(t.name)+"</strong><br><small>"+esc(t.role)+"</small></div>"}).join("");
+$("aboutTitle").textContent=D.aboutTitle;
+$("aboutBody").innerHTML=D.about.map(function(p){return"<p>"+esc(p)+"</p>"}).join("");
+$("inds").innerHTML=D.industries.map(function(i){return'<div class="c" style="margin-bottom:10px"><h3>'+esc(i.name)+"</h3><p>"+esc(i.desc)+"</p></div>"}).join("");
+$("faq").innerHTML=D.faqs.map(function(f){return"<details><summary>"+esc(f.q)+"</summary><p>"+esc(f.a)+"</p></details>"}).join("");
+$("ctaTitle").textContent=D.cta.title;$("ctaText").textContent=D.cta.text;$("ctaBtn").textContent=D.cta.btn;
+$("foot").textContent=D.footer;
+document.title=D.brand+" – Homepage";
+}
+
+function get(f){return fetch("content/"+f+".json").then(function(r){return r.json()})}
+Promise.all(["site","clients","services","differentiators","stats","cases","fit","testimonials","industries","faqs"].map(get)).then(function(a){
+var s=a[0];D={brand:s.brand,nav:s.nav,hdrCta:s.hdrCta,hero:s.hero,proof:s.proof,logosTitle:s.logosTitle,clients:a[1].items,svcTitle:s.svcTitle,svcIntro:s.svcIntro,services:a[2].items,whyTitle:s.whyTitle,differentiators:a[3].items,statTitle:s.statTitle,stats:a[4].items,cases:a[5].items,fitTitle:s.fitTitle,fit:a[6],testTitle:s.testTitle,testimonials:a[7].items,aboutTitle:s.aboutTitle,about:s.about,industries:a[8].items,faqs:a[9].items,cta:s.cta,footer:s.footer};render()}).catch(function(e){document.body.insertAdjacentHTML("afterbegin","<p style='padding:20px'>Could not load content/*.json. Open this page through a web server (not file://). "+e.message+"</p>")});
+</script></body></html>

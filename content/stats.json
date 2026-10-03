@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "value": "00+",
+      "label": "Clients served"
+    },
+    {
+      "value": "00%",
+      "label": "Average growth metric"
+    },
+    {
+      "value": "0.0B",
+      "label": "Media spend managed"
+    }
+  ]
+}

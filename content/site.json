@@ -1,0 +1,44 @@
+{
+  "brand": "YourAgency",
+  "nav": [
+    "Services",
+    "Case studies",
+    "About",
+    "FAQ",
+    "Contact"
+  ],
+  "hdrCta": "Free consultation",
+  "hero": {
+    "eyebrow": "Digital marketing agency",
+    "h1": "Grow your brand with performance-led marketing.",
+    "sub": "Placeholder copy. Replace with your own positioning statement.",
+    "cta1": "Free consultation",
+    "cta2": "See our work"
+  },
+  "proof": [
+    {
+      "t": "Headline proof point one"
+    },
+    {
+      "t": "Headline proof point two"
+    }
+  ],
+  "logosTitle": "Brands that trust us",
+  "svcTitle": "Services",
+  "svcIntro": "One-line intro to your integrated service offering.",
+  "whyTitle": "Why partner with us",
+  "statTitle": "Results in numbers",
+  "fitTitle": "Are we a good match?",
+  "testTitle": "What clients say",
+  "aboutTitle": "About us",
+  "about": [
+    "Placeholder paragraph about who you are and what you do.",
+    "Placeholder paragraph about your team and working style."
+  ],
+  "cta": {
+    "title": "Let us help you grow",
+    "text": "Short closing call to action.",
+    "btn": "Free consultation"
+  },
+  "footer": "© YourAgency. Address · Phone · Email · Social links"
+}

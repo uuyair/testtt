@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "title": "Hospitality case",
+      "metric1": "+00% ROAS",
+      "metric2": "+00% conversions",
+      "url": "#"
+    },
+    {
+      "title": "Supplements case",
+      "metric1": "+00% ROAS",
+      "metric2": "-00% CAC",
+      "url": "#"
+    },
+    {
+      "title": "Beauty case",
+      "metric1": "+00% ROAS",
+      "metric2": "-00% CPA",
+      "url": "#"
+    }
+  ]
+}

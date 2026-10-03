@@ -1,0 +1,18 @@
+{
+  "yes": [
+    "Values expert advice",
+    "Wants to scale",
+    "Thinks long-term",
+    "Accepts that some tests fail",
+    "Already advertising online",
+    "Gives open feedback"
+  ],
+  "no": [
+    "Wants a standard package",
+    "Only wants the cheapest option",
+    "Only wants short-term results",
+    "Avoids being challenged",
+    "Has no media budget",
+    "Rarely communicates"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "name": "Hospitality",
+      "desc": "Short industry description."
+    },
+    {
+      "name": "Healthcare",
+      "desc": "Short industry description."
+    },
+    {
+      "name": "Automotive",
+      "desc": "Short industry description."
+    },
+    {
+      "name": "E-commerce & retail",
+      "desc": "Short industry description."
+    },
+    {
+      "name": "B2B & technology",
+      "desc": "Short industry description."
+    },
+    {
+      "name": "Education",
+      "desc": "Short industry description."
+    },
+    {
+      "name": "Real estate",
+      "desc": "Short industry description."
+    }
+  ]
+}

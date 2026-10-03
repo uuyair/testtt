@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "quote": "Placeholder testimonial quote.",
+      "name": "Client Name 1",
+      "role": "Job title"
+    },
+    {
+      "quote": "Placeholder testimonial quote.",
+      "name": "Client Name 2",
+      "role": "Job title"
+    },
+    {
+      "quote": "Placeholder testimonial quote.",
+      "name": "Client Name 3",
+      "role": "Job title"
+    }
+  ]
+}
